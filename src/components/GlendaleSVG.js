@@ -25,7 +25,7 @@ export default class GlendaleSVG extends React.Component {
 
   render() {
     return (
-      <svg width="284px" height="61px" viewBox="-1 -1 285 62" version="1.1">
+      <svg id="GlendaleSVG" width="284px" height="61px" viewBox="-1 -1 285 62" version="1.1">
         <g id="Glendale" fill="none" stroke="#FFFFFF" strokeWidth="1">
           <g id="G">
             <path className={this.state.pathClass} d="M49.469621,19.2881298 C49.469621,19.2881298 48.0136982,0.853290505 26.2277104,0.853290505 C4.44172252,0.853290505 -0.663110863,21.1140538 0.0710173121,32.8236914 C0.805145487,44.533329 6.54779128,58.1945727 25.2275342,60.1626244 C43.907277,62.1306762 52.2974812,42.4249131 50.294781,33.0333584" id="Path-11" />

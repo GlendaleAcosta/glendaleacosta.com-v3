@@ -18,11 +18,10 @@
 .title {
   position: absolute;
   margin: 0 auto;
-  left: 43%;
-  top: 22%;
+  left: 40%;
+  top: 20%;
   display: flex;
   flex-direction: column;
-  padding: 30px;
 
   img {
     margin-left: 100px;
@@ -37,6 +36,17 @@
 
 .test-path-2 {
   stroke-dashoffset: 0;
+}
+
+
+// Acosta-Title
+
+#AcostaSVG {
+  margin-left: 100px;
+}
+
+#GlendaleSVG {
+  margin: 20px;
 }
 
 
@@ -65,13 +75,17 @@
 }
 
 .portfolio-btn {
-  background-color: rgba(0,0,0,0.4);
-  width: 200px;
-  height: 40px;
+  background-color: rgba(0,0,0,0.2);
+  // background-color: #541D1F;
+  // width: 200px;
+  // height: 40px;
+  padding: 12px 65px;
   border: 1px solid #fff;
   color: #fff;
   font-size: 14px;
   margin: 5px;
   cursor: pointer;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
 }
 
