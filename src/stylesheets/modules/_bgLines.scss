@@ -1,0 +1,46 @@
+.bg-lines {
+  width: calc(100% - 50px);
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  margin: 0 auto;
+  opacity: 0.1;
+}
+
+.bg-line-1 {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: #fff; 
+  left: 30px;
+}
+
+.bg-line-2 {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: #fff; 
+  left: 20%
+}
+.bg-line-3 {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: #fff;
+  left: 50%;
+  transform: translateX(-0.5px);
+}
+.bg-line-4 {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: #fff;
+  right: 20%;
+}
+.bg-line-5 {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: #fff;
+  right: 30px;
+}

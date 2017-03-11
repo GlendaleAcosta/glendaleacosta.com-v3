@@ -1,0 +1,35 @@
+.scroll-btn-container {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  background-color: rgba(30,30,30,0.4);
+  border-radius: 50%;
+  width: 62px;
+  height: 62px;
+}
+#scroll-btn {
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  path {
+    stroke-dashoffset: 70;
+    transition: 0.35s ease-in-out;
+  }
+}
+#scroll-btn:hover {
+  path {
+    stroke: #581B1B;
+    stroke-dasharray: 190;
+    stroke-dashoffset: 0;
+    transition: 0.35s ease-in-out;
+  }
+}
+.down-arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  z-index: 1;
+}
