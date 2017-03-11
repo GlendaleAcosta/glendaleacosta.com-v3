@@ -6,7 +6,7 @@ const ScrollBtn = () => (
     <p className="scroll-btn-text">SCROLL DOWN</p>
     <svg id="scroll-btn" width="62px" height="62px" viewBox="-1 -1 62 62">
       <path
-        stroke="#FFF"
+        stroke="rgba(255,255,255,0.6)"
         strokeDasharray="190"
         strokeDashoffset="70"
         strokeWidth="2"

@@ -1,0 +1,47 @@
+.navbar {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+}
+
+.nav-list {
+  padding: 0;
+  margin: 0;
+}
+
+.nav-box {
+  width: 60px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-text {
+  color: #fff;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 12px;
+  margin: 0 0 0 10px;
+}
+
+.nav-line-grey {
+  position: relative;
+  width: 2px;
+  background-color: rgba(255,255,255, 0.2);
+  height: 36px;
+}
+
+.nav-line-white {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  background-color: #fff;
+  height: 36px;
+  transition: 0.2s ease-in-out;
+}
+
+.nav-link {
+  cursor: pointer;
+  text-decoration: none;
+}
