@@ -4,7 +4,6 @@ import classNames from 'classnames';
 export default class GlendaleSVG extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
     this.state = {
       pathClass: classNames({
         'test-path': true,
