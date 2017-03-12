@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Particles from 'react-particles-js';
 import ScrollBtn from '../components/ScrollBtn';
 import SocialNav from '../components/SocialNav';
 import Hamburger from '../components/Hamburger';
@@ -8,7 +9,16 @@ import AcostaSVG from '../components/AcostaSVG';
 import Navbar from './Navbar';
 
 const github = 'https://github.com/GlendaleAcosta/glendaleacosta.com-v3';
-
+const particleParams = {
+  particles: {
+    number: {
+      value: 90
+    },
+    line_linked: {
+      enable: false
+    }
+  }
+};
 export default class Home extends React.Component {
   constructor() {
     super();
@@ -34,6 +44,7 @@ export default class Home extends React.Component {
         <SocialNav />
         <ScrollBtn />
         <a href={github} className="source-link">SOURCE</a>
+        <Particles params={particleParams} />
       </div>
     );
   }
