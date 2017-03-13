@@ -14,7 +14,7 @@ const github = 'https://github.com/GlendaleAcosta/glendaleacosta.com-v3';
 const particleParams = {
   particles: {
     number: {
-      value: 80
+      value: 120
     },
     line_linked: {
       enable: false
@@ -47,7 +47,7 @@ export default class Home extends React.Component {
         <SocialNav />
         <ScrollBtn />
         <a href={github} className="source-link">SOURCE</a>
-        <Particles params={particleParams} />
+        <Particles width="100%" height="calc(100vh - 50px)" params={particleParams} />
       </div>
     );
   }

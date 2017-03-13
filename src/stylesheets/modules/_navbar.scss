@@ -47,16 +47,16 @@
 }
 
 .nav-line-white {
+  @include lg-desktop {
+    height: 56px;
+  }
   position: absolute;
-  top: 0px;
+  top: 0;
   left: 0;
   width: 2px;
   background-color: #fff;
   height: 36px;
   transition: 0.2s ease-in-out;
-  @include lg-desktop {
-    height: 56px;
-  }
 }
 
 .nav-link {

@@ -1,6 +1,6 @@
 .source-link {
   display: none;
-  
+
   @include tablet-min {
     color: #fff;
     font-family: 'Open Sans Condensed', sans-serif;
@@ -10,6 +10,7 @@
     bottom: 10px;
     text-decoration: none;
     margin: 0;
+    display: block;
   }
 }
 
@@ -34,7 +35,10 @@
   @include tablet-min {
     left: 40%;
   }
-
+  
+  @include lg-desktop {
+    top: 23%;
+  }
 }
 
 .test-path {
@@ -52,10 +56,21 @@
 
 #AcostaSVG {
   margin-left: 100px;
+  @include lg-desktop {  
+    width: auto;
+    height: 110px;
+    margin-left: 150px;
+  }
 }
 
 #GlendaleSVG {
   margin: 20px;
+
+  @include lg-desktop { 
+    margin: 40px; 
+    width: auto;
+    height: 110px;
+  }
 }
 
 
@@ -73,6 +88,10 @@
   @include tablet-min {
     left: 180px;
   }
+  @include lg-desktop {
+    top: 80px;
+    left: 240px;
+  }
 }
 
 .sub-title {
@@ -86,13 +105,14 @@
     font-weight: 100;
     font-style: normal;
   }
+
+  @include lg-desktop {
+    font-size: 24px;
+  }
 }
 
 .portfolio-btn {
   background-color: rgba(0,0,0,0.2);
-  // background-color: #541D1F;
-  // width: 200px;
-  // height: 40px;
   padding: 12px 65px;
   border: 1px solid #fff;
   color: #fff;
@@ -101,5 +121,10 @@
   cursor: pointer;
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
+
+  @include lg-desktop {
+    padding: 17px 90px;
+    font-size: 20px;
+  }
 }
 
