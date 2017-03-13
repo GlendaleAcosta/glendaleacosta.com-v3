@@ -9,6 +9,17 @@
   width: 62px;
   height: 62px;
   text-align: center;
+
+  @include lg-desktop {
+    bottom: 25px;
+    width: 90px;
+    height: 90px;
+    svg {
+      width: 90px;
+      height: 90px;
+    }
+  }
+
 }
 #scroll-btn {
   border-radius: 50%;
@@ -44,4 +55,9 @@
   left: 50%;
   width: 120%;
   transform: translateX(-50%);
+
+  @include lg-desktop {
+    font-size: 16px;
+    top: -35px;
+  }
 }

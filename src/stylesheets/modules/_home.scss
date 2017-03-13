@@ -12,6 +12,13 @@
     margin: 0;
     display: block;
   }
+
+    @include lg-desktop {
+    bottom: 25px;
+    right: 25px;
+    font-size: 20px;
+  }
+
 }
 
 
@@ -33,9 +40,12 @@
   }
 
   @include tablet-min {
-    left: 40%;
+    left: 20%;
   }
   
+  @include desktop-min {
+    left: 40%;
+  }
   @include lg-desktop {
     top: 23%;
   }
