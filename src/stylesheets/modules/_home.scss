@@ -1,12 +1,16 @@
 .source-link {
-  color: #fff;
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 12px;
-  position: absolute;
-  right: 15px;
-  bottom: 10px;
-  text-decoration: none;
-  margin: 0;
+  display: none;
+  
+  @include tablet-min {
+    color: #fff;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 12px;
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    text-decoration: none;
+    margin: 0;
+  }
 }
 
 

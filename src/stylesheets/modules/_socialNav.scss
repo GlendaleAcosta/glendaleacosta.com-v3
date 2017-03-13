@@ -1,11 +1,15 @@
 .social-nav {
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 12px;
-  position: absolute;
-  left: 15px;
-  bottom: 10px;
-  margin: 0;
-  display: flex;
+  display: none;
+
+  @include tablet-min {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 12px;
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+    margin: 0;
+    display: flex;
+  }
 
   a {
     color: #fff;
