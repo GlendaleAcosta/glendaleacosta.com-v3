@@ -6,13 +6,15 @@ import SocialNav from '../components/SocialNav';
 import Hamburger from '../components/Hamburger';
 import GlendaleSVG from '../components/GlendaleSVG';
 import AcostaSVG from '../components/AcostaSVG';
+import Logo from '../components/Logo';
 import Navbar from './Navbar';
 
 const github = 'https://github.com/GlendaleAcosta/glendaleacosta.com-v3';
+
 const particleParams = {
   particles: {
     number: {
-      value: 90
+      value: 80
     },
     line_linked: {
       enable: false
@@ -29,6 +31,7 @@ export default class Home extends React.Component {
     return (
       <div className="page">
         <Navbar />
+        <Logo />
         <div className="title">
           <GlendaleSVG />
           <AcostaSVG />
