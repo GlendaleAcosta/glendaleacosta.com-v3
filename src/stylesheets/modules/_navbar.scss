@@ -1,8 +1,13 @@
 .navbar {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 15px;
+  display: none;
+
+  @include tablet-min {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+  }
 }
 
 .nav-list {
@@ -15,6 +20,10 @@
   height: 40px;
   display: flex;
   align-items: center;
+  @include lg-desktop {
+    width: 90px;
+    height: 60px;
+  }
 }
 
 .nav-text {
@@ -22,6 +31,9 @@
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 12px;
   margin: 0 0 0 10px;
+  @include lg-desktop {
+    font-size: 20px;
+  }
 }
 
 .nav-line-grey {
@@ -29,16 +41,22 @@
   width: 2px;
   background-color: rgba(255,255,255, 0.2);
   height: 36px;
+  @include lg-desktop {
+    height: 56px;
+  }
 }
 
 .nav-line-white {
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 0;
   width: 2px;
   background-color: #fff;
   height: 36px;
   transition: 0.2s ease-in-out;
+  @include lg-desktop {
+    height: 56px;
+  }
 }
 
 .nav-link {
