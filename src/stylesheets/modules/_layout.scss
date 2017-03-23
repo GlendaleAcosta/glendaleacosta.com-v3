@@ -10,11 +10,28 @@
   position: relative;
 }
 
+.page-container{
+  width: calc(100% - 50px);
+  // height: calc(100% - 50px);
+  // width: calc(100% - 50px);
+  height: calc(100% - 50px);
+  // width: 210%;
+  // position: absolute;
+  z-index: 20;
+  display: flex;
+  position: relative;
+  // div{
+  //   display: inline;
+  // }
+}
+
 .page {
+  // width: 100%;
+  // height: 100%;
+  border: 1px solid white;
   width: calc(100% - 50px);
   height: calc(100% - 50px);
-  border: 1px solid white;
-  position: relative;
+  position: absolute;
   z-index: 10; 
   overflow: hidden;
 }

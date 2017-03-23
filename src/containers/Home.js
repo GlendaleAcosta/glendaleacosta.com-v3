@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import Particles from 'react-particles-js';
+import { Motion, spring } from 'react-motion';
 import ScrollBtn from '../components/ScrollBtn';
 import SocialNav from '../components/SocialNav';
 import Hamburger from '../components/Hamburger';
@@ -10,7 +11,6 @@ import Logo from '../components/Logo';
 import Navbar from './Navbar';
 
 const github = 'https://github.com/GlendaleAcosta/glendaleacosta.com-v3';
-
 const particleParams = {
   particles: {
     number: {
@@ -30,6 +30,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div className="page">
+        <Hamburger />
         <Navbar />
         <Logo />
         <div className="title">
@@ -42,8 +43,6 @@ export default class Home extends React.Component {
             <Link to="/portfolio" className="portfolio-btn">View Portfolio</Link>
           </div>
         </div>
-
-        <Hamburger />
         <SocialNav />
         <ScrollBtn />
         <a href={github} className="source-link">SOURCE</a>
