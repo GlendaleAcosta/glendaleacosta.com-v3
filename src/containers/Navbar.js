@@ -1,20 +1,7 @@
-import React, { Component } from 'react';
-import { Link, IndexLink } from 'react-router';
+import React from 'react';
+import { StaggeredMotion, spring } from 'react-motion';
 import NavBox from '../components/NavBox';
 
-/* export default class Navbar extends Component {
-  render() {
-    return (
-      <div className="navbar">
-        <NavBox link="/" text="Home" />
-        <NavBox link="/portfolio" text="Portfolio" />
-        <NavBox link="/contact" text="Contact" />
-      </div>
-    );
-  }
-}*/
-
-// ---------------------------------------
 const NavBoxes = [
   { link: '/', text: 'Home' },
   { link: '/portfolio', text: 'Portfolio' },
@@ -22,7 +9,6 @@ const NavBoxes = [
 ];
 
 // import React from 'react';
-import { StaggeredMotion, spring } from 'react-motion';
 
 // animation config
 const startX = 150;
