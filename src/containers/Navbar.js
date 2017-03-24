@@ -1,6 +1,6 @@
 import React from 'react';
 import { StaggeredMotion, spring } from 'react-motion';
-import NavBox from '../components/NavBox';
+import NavBox from '../components/Layout/NavBox';
 
 const NavBoxes = [
   { link: '/', text: 'Home' },

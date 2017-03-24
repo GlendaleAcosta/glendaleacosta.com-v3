@@ -1,11 +1,11 @@
 import React from 'react';
 import Particles from 'react-particles-js';
 
-import SocialNav from '../components/SocialNav';
-import Hamburger from '../components/Hamburger';
-import Logo from '../components/Logo';
+import SocialNav from '../components/Layout/SocialNav';
+import Hamburger from '../components/Layout/Hamburger';
+import Logo from '../components/Layout/Logo';
+import SourceLink from '../components/Layout/SourceLink';
 import Navbar from './Navbar';
-import SourceLink from '../components/SourceLink';
 
 import ScrollBtn from '../components/Home/ScrollBtn';
 import GlendaleSVG from '../components/Home/GlendaleSVG';
@@ -40,9 +40,6 @@ export default class Home extends React.Component {
           <div className="sub-title-container">
             <p className="sub-title">
               An aspiring <span>engineer</span> and <span>designer</span>.
-            </p>
-            <p className="sub-title">
-              An avid gamer and learner.
             </p>
             <PortfolioBtn />
           </div>
