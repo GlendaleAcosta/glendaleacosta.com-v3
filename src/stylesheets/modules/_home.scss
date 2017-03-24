@@ -151,7 +151,11 @@
   display: block;
   z-index: 2;
   position: relative;
+  transition: color 0.2s ease-in-out;
 
+  &:hover {
+    color: #000;
+  }
   @include lg-desktop {
     padding: 17px 90px;
     font-size: 20px;
