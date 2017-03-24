@@ -121,16 +121,36 @@
   }
 }
 
+.portfolio-btn-container {
+  overflow: hidden;
+  width: auto;
+  position: relative;
+  cursor: pointer;
+}
+.portfolio-btn-bg {
+  height: 42px;
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  // margin: 5px;
+  top: 0px;
+  z-index: 1;
+}
+
 .portfolio-btn {
-  background-color: rgba(0,0,0,0.2);
+  // background-color: rgba(0,0,0,0.2);
   padding: 12px 65px;
   border: 1px solid #fff;
+  // color: #fff;
   color: #fff;
   font-size: 14px;
-  margin: 5px;
+  // margin: 5px;
   cursor: pointer;
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
+  display: block;
+  z-index: 2;
+  position: relative;
 
   @include lg-desktop {
     padding: 17px 90px;

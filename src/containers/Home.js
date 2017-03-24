@@ -9,6 +9,7 @@ import AcostaSVG from '../components/AcostaSVG';
 import Logo from '../components/Logo';
 import Navbar from './Navbar';
 import SourceLink from '../components/SourceLink';
+import PortfolioBtn from '../components/PortfolioBtn';
 
 const particleParams = {
   particles: {
@@ -39,7 +40,7 @@ export default class Home extends React.Component {
             <p className="sub-title">
               An aspiring <span>engineer</span> and <span>designer</span>.
             </p>
-            <Link to="/portfolio" className="portfolio-btn">View Portfolio</Link>
+            <PortfolioBtn />
           </div>
         </div>
         <SocialNav />
