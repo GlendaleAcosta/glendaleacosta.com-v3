@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
 import Particles from 'react-particles-js';
-import { Motion, spring } from 'react-motion';
 import ScrollBtn from '../components/ScrollBtn';
 import SocialNav from '../components/SocialNav';
 import Hamburger from '../components/Hamburger';
@@ -9,8 +8,8 @@ import GlendaleSVG from '../components/GlendaleSVG';
 import AcostaSVG from '../components/AcostaSVG';
 import Logo from '../components/Logo';
 import Navbar from './Navbar';
+import SourceLink from '../components/SourceLink';
 
-const github = 'https://github.com/GlendaleAcosta/glendaleacosta.com-v3';
 const particleParams = {
   particles: {
     number: {
@@ -45,7 +44,7 @@ export default class Home extends React.Component {
         </div>
         <SocialNav />
         <ScrollBtn />
-        <a href={github} className="source-link">SOURCE</a>
+        <SourceLink />
         <Particles width="100%" height="calc(100vh - 50px)" params={particleParams} />
       </div>
     );
