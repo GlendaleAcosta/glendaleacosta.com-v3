@@ -49,7 +49,7 @@ export default class PortfolioBtn extends Component {
       <div onMouseEnter={this.onEnter} onMouseLeave={this.onLeave} className="portfolio-btn-container">
         <Motion
           defaultStyle={{ y: 300 }}
-          style={{ y: spring(0, { stiffness: 320, damping: 60 }) }} 
+          style={{ y: spring(0, { stiffness: 320, damping: 60 }) }}
         >
           {this.renderBtn}
         </Motion>

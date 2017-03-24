@@ -24,28 +24,36 @@ const Links = [
 ];
 
 export default class SocialNav extends React.Component {
+
+
+  getStyles = prevInterpolatedStyles => prevInterpolatedStyles.map((_, i) =>
+    i === 0
+    ? { y: spring(0, { stiffness: initialStiffness, damping: initialDamping }), o: spring(1) }
+    : {
+      y: spring(prevInterpolatedStyles[i - 1].y,
+        { stiffness: finalStiffness, damping: finalDamping }),
+      o: spring(prevInterpolatedStyles[i - 1].o)
+    })
+
+  renderNav = interpolatingStyles => (
+    <div className="social-nav">
+      {interpolatingStyles.map((style, i) => {
+        const linkStyles = {
+          WebkitTransform: `translate3d(0, ${style.y}%, 0)`,
+          opacity: style.o
+        };
+        return <a href={Links[i].link} key={i} style={linkStyles}>{Links[i].name}</a>;
+      })}
+    </div>
+  )
+
   render() {
     return (
       <StaggeredMotion
         defaultStyles={defaultStyles}
-        styles={prevInterpolatedStyles => prevInterpolatedStyles.map((_, i) => i === 0
-              ? { y: spring(0, { stiffness: initialStiffness, damping: initialDamping }), o: spring(1) }
-              : {
-                y: spring(prevInterpolatedStyles[i - 1].y, { stiffness: finalStiffness, damping: finalDamping }),
-                o: spring(prevInterpolatedStyles[i - 1].o)
-              })}
+        styles={this.getStyles}
       >
-        {interpolatingStyles =>
-          <div className="social-nav">
-            {interpolatingStyles.map((style, i) => {
-              const linkStyles = {
-                WebkitTransform: `translate3d(0, ${style.y}%, 0)`,
-                opacity: style.o
-              };
-              return <a href={Links[i].link} key={i} style={linkStyles}>{Links[i].name}</a>;
-            })}
-          </div>
-          }
+        {this.renderNav}
       </StaggeredMotion>
 
     );

@@ -29,7 +29,7 @@ export default class ScrollBtn extends React.Component {
 
   render() {
     return (
-      <Motion defaultStyle={{ y: 300 }} style={{ y: spring(0, { stiffness: 320, damping: 60 }) }} >
+      <Motion defaultStyle={{ y: 300 }} style={{ y: spring(0, { stiffness: 130, damping: 15 }) }} >
         {this.renderBtn}
       </Motion>
     );

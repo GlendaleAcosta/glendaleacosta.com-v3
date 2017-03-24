@@ -19,7 +19,7 @@ export default class Logo extends React.Component {
 
   render() {
     return (
-      <Motion defaultStyle={{ y: -300 }} style={{ y: spring(0, { stiffness: 320, damping: 60 }) }} >
+      <Motion defaultStyle={{ y: -300 }} style={{ y: spring(0, { stiffness: 380, damping: 60 }) }} >
         {this.renderLogo}
       </Motion>
     );
