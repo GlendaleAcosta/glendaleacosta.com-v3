@@ -11,6 +11,7 @@ import ScrollBtn from '../components/Home/ScrollBtn';
 import GlendaleSVG from '../components/Home/GlendaleSVG';
 import AcostaSVG from '../components/Home/AcostaSVG';
 import PortfolioBtn from '../components/Home/PortfolioBtn';
+import SubTitle from '../components/Home/SubTitle';
 
 const particleParams = {
   particles: {
@@ -38,9 +39,7 @@ export default class Home extends React.Component {
           <GlendaleSVG />
           <AcostaSVG />
           <div className="sub-title-container">
-            <p className="sub-title">
-              An aspiring <span>engineer</span> and <span>designer</span>.
-            </p>
+            <SubTitle />
             <PortfolioBtn />
           </div>
         </div>

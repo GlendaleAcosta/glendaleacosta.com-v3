@@ -6,7 +6,7 @@ export default class PortfolioBtn extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      test: spring(-105, { stiffness: 35, damping: 16 })
+      test: spring(-105, { stiffness: 35, damping: 14 })
     };
   }
 
