@@ -3,7 +3,6 @@ import { Motion, spring } from 'react-motion';
 import { Link } from 'react-router';
 
 export default class PortfolioBtn extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -48,7 +47,10 @@ export default class PortfolioBtn extends Component {
   render() {
     return (
       <div onMouseEnter={this.onEnter} onMouseLeave={this.onLeave} className="portfolio-btn-container">
-        <Motion defaultStyle={{ y: 300 }} style={{ y: spring(0, { stiffness: 320, damping: 60 }) }} >
+        <Motion
+          defaultStyle={{ y: 300 }}
+          style={{ y: spring(0, { stiffness: 320, damping: 60 }) }} 
+        >
           {this.renderBtn}
         </Motion>
         <Motion defaultStyle={{ y: 200 }} style={{ y: this.state.test }} >

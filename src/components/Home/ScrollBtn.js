@@ -1,6 +1,6 @@
 import React from 'react';
 import { Motion, spring } from 'react-motion';
-import downArrow from '../images/Down-Arrow.svg';
+import downArrow from '../../images/Down-Arrow.svg';
 
 export default class ScrollBtn extends React.Component {
 

@@ -1,15 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router';
 import Particles from 'react-particles-js';
-import ScrollBtn from '../components/ScrollBtn';
+
 import SocialNav from '../components/SocialNav';
 import Hamburger from '../components/Hamburger';
-import GlendaleSVG from '../components/GlendaleSVG';
-import AcostaSVG from '../components/AcostaSVG';
 import Logo from '../components/Logo';
 import Navbar from './Navbar';
 import SourceLink from '../components/SourceLink';
-import PortfolioBtn from '../components/PortfolioBtn';
+
+import ScrollBtn from '../components/Home/ScrollBtn';
+import GlendaleSVG from '../components/Home/GlendaleSVG';
+import AcostaSVG from '../components/Home/AcostaSVG';
+import PortfolioBtn from '../components/Home/PortfolioBtn';
 
 const particleParams = {
   particles: {
@@ -39,6 +40,9 @@ export default class Home extends React.Component {
           <div className="sub-title-container">
             <p className="sub-title">
               An aspiring <span>engineer</span> and <span>designer</span>.
+            </p>
+            <p className="sub-title">
+              An avid gamer and learner.
             </p>
             <PortfolioBtn />
           </div>
