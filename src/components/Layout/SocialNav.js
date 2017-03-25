@@ -35,7 +35,7 @@ export default class SocialNav extends React.Component {
       o: spring(prevInterpolatedStyles[i - 1].o)
     })
 
-  renderNav = interpolatingStyles => (
+  renderSocialNav = interpolatingStyles => (
     <div className="social-nav">
       {interpolatingStyles.map((style, i) => {
         const linkStyles = {
@@ -53,7 +53,7 @@ export default class SocialNav extends React.Component {
         defaultStyles={defaultStyles}
         styles={this.getStyles}
       >
-        {this.renderNav}
+        {this.renderSocialNav}
       </StaggeredMotion>
 
     );

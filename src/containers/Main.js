@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { TransitionMotion, spring } from 'react-motion';
 import img from '../../src/images/Background2.png';
 import BGLines from '../components/BGLines';
 

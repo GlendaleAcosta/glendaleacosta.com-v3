@@ -1,11 +1,7 @@
 import React from 'react';
 import Particles from 'react-particles-js';
 
-import SocialNav from '../components/Layout/SocialNav';
-import Hamburger from '../components/Layout/Hamburger';
-import Logo from '../components/Layout/Logo';
-import SourceLink from '../components/Layout/SourceLink';
-import Navbar from './Navbar';
+import PageLayout from '../components/Layout/PageLayout';
 
 import ScrollBtn from '../components/Home/ScrollBtn';
 import GlendaleSVG from '../components/Home/GlendaleSVG';
@@ -32,9 +28,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div className="page">
-        <Hamburger />
-        <Navbar />
-        <Logo />
+
         <div className="title">
           <GlendaleSVG />
           <AcostaSVG />
@@ -43,9 +37,9 @@ export default class Home extends React.Component {
             <PortfolioBtn />
           </div>
         </div>
-        <SocialNav />
         <ScrollBtn />
-        <SourceLink />
+
+        <PageLayout />
         <Particles width="100%" height="calc(100vh - 50px)" params={particleParams} />
       </div>
     );
