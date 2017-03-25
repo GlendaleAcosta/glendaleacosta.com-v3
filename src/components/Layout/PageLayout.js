@@ -5,17 +5,14 @@ import Navbar from '../../containers/Navbar';
 import SocialNav from './SocialNav';
 import SourceLink from './SourceLink';
 
-export default class PageLayout extends React.Component {
+const PageLayout = () => (
+  <div className="page-layout">
+    <Hamburger />
+    <Logo />
+    <Navbar />
+    <SocialNav />
+    <SourceLink />
+  </div>
+);
 
-  render() {
-    return (
-      <div className="page-layout">
-        <Hamburger />
-        <Logo />
-        <Navbar />
-        <SocialNav />
-        <SourceLink />
-      </div>
-    );
-  }
-}
+export default PageLayout;

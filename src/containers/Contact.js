@@ -1,9 +1,8 @@
 import React from 'react';
-import Navbar from './Navbar';
-import Hamburger from '../components/Layout/Hamburger';
-import Logo from '../components/Layout/Logo';
-import SocialNav from '../components/Layout/SocialNav';
-import SourceLink from '../components/Layout/SourceLink';
+
+import PageLayout from '../components/Layout/PageLayout';
+import BackgroundImg from '../components/Contact/BackgroundImg';
+import ContactTitle from '../components/Contact/ContactTitle';
 
 export default class Contact extends React.Component {
   constructor() {
@@ -14,14 +13,12 @@ export default class Contact extends React.Component {
   render() {
     return (
       <div className="page">
-        <Hamburger />
-        <Logo />
-        <Navbar />
 
-        <h1>Contact Page</h1>
+        <ContactTitle />
+        <BackgroundImg />
 
-        <SocialNav />
-        <SourceLink />
+        <div className="contact-box-container" />
+        <PageLayout />
       </div>
     );
   }

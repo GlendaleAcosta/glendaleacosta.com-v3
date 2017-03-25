@@ -1,0 +1,53 @@
+.contact-bg-container {
+  width: 55%;
+  height: 70%;
+  background-color: lightblue;
+  position: absolute;
+  right: 15px;
+  top: 48%;
+  transform: translateY(-50%);
+  display: flex;
+  overflow: hidden;
+}
+
+.contact-rect-1 {
+  width: 60%;
+  height: 100%;
+  background-color: lightseagreen;
+}
+
+.contact-rect-2 {
+  width: 15%;
+  height: 100%;
+  background-color: lightcoral;
+}
+
+.contact-rect-3 {
+  width: 25%;
+  height: 100%;
+  background-color: lightseagreen;
+}
+
+.contact-box-container {
+  width: 48vw;
+  height: 30vw;
+  background-color: lightblue;
+  position: absolute;
+  top: 30%;
+  left: 15%;
+}
+
+.contact-title-container {
+  position: absolute;
+  top: 14%;
+  left: 18%;
+  p {
+    text-align: right;
+  }
+}
+
+.contact-title {
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  margin: 0; 
+}
