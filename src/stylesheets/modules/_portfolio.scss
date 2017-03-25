@@ -16,7 +16,7 @@
 
 .slider-container {
   position: absolute;
-  right: -50px;
+  right: -26px;
   top: 60%;
   transform: translateY(-50%);
   display: flex;
@@ -24,17 +24,32 @@
   height: 22vw;
   background-color: rgba(0,0,0,0.2);
   overflow: hidden;
-
+  z-index: 2;
 }
+
 
 .project {
   width: 22vw;
   height: 22vw;
-  margin: 0 10px;
+  // margin: 0 10px;
+  margin-left: 20px;
+  // border-left: 10px solid maroon;
+  // border-right: 10px solid maroon;
+  // border: 10px solid rgba(0,0,0,0);
   background-color: lightgray;
   cursor: pointer;
+
+  &:first-child {
+    margin-left: 0;
+  }
   
   &:hover {
     box-shadow: none;
   }
+}
+
+.project-slider {
+  width: auto;
+  display: flex;
+
 }

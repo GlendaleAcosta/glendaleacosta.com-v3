@@ -1,10 +1,6 @@
 import React from 'react';
 import Navbar from './Navbar';
 
-import Hamburger from '../components/Layout/Hamburger';
-import Logo from '../components/Layout/Logo';
-import SocialNav from '../components/Layout/SocialNav';
-import SourceLink from '../components/Layout/SourceLink';
 import PageLayout from '../components/Layout/PageLayout';
 
 import PortfolioTitle from '../components/Portfolio/PortfolioTitle';
