@@ -1,13 +1,19 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { selectProject } from '../../actions/sliderActions';
+
+@connect(store => ({
+  projectSlider: store.projectSlider
+}))
 
 export default class Project extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   clickedProject = () => {
-    console.log(`clicked project: ${this.props.project} `);
-    console.log(`${ (this.props.index -1) * 22}vw - ${this.props.index * 20}px `);
+    // console.log(`clicked project: ${this.props.project} `);
+    const position = `-${(this.props.index - 1) * 22}vw - ${this.props.index * 20}px `;
+    this.props.dispatch(
+      selectProject(position)
+    );
   }
 
   render() {
@@ -18,6 +24,12 @@ export default class Project extends React.Component {
     );
   }
 }
+
+// Project.propTypes = {
+//   index: React.PropTypes.number.isRequired,
+//   project: React.PropTypes.number.isRequired,
+//   dispatch: React.PropTypes.func.isRequired
+// };
 
 // -66vw - 80px
 // 3(22vw) - 4(20)px

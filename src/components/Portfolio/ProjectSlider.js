@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Project from './Project';
 
 let projects = [1, 2, 3, 4, 5];
@@ -9,10 +10,13 @@ const last4Projects = projects.slice((length - 4), length);
 projects = last4Projects.concat(projects);
 projects = projects.concat(first4Projects);
 
+@connect(store => ({
+  projectSlider: store.projectSlider
+}))
+
 export default class ProjectSlider extends React.Component {
   constructor(props) {
     super(props);
-    console.log(projects);
   }
 
   renderProjects = () => projects.map((project, i) => (
@@ -22,7 +26,10 @@ export default class ProjectSlider extends React.Component {
   render() {
     return (
       <div className="slider-container">
-        <div style={{ transform: 'translateX( calc(-66vw - 80px))' }} className="project-slider">
+        <div
+          style={{ transform: `translateX( calc(${this.props.projectSlider.position}))` }}
+          className="project-slider"
+        >
           {this.renderProjects()}
         </div>
       </div>
