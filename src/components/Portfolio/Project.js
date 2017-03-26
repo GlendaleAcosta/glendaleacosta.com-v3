@@ -9,11 +9,32 @@ import { selectProject } from '../../actions/sliderActions';
 export default class Project extends React.Component {
 
   clickedProject = () => {
-    // console.log(`clicked project: ${this.props.project} `);
-    const position = `-${(this.props.index - 1) * 22}vw - ${this.props.index * 20}px `;
+    const that = this;
+    let position = `-${(this.props.index - 1) * 22}vw - ${this.props.index * 20}px `;
+    const projectNum = this.props.project;
+    const index = this.props.index;
+
     this.props.dispatch(
-      selectProject(position)
+      selectProject(position, projectNum, index, true)
     );
+
+    if (this.props.index < 2) {
+      const newIndex = this.props.project + 1;
+      setTimeout(() => {
+        position = `-${(newIndex - 1) * 22}vw - ${newIndex * 20}px `;
+        that.props.dispatch(
+          selectProject(position, projectNum, newIndex, false)
+        );
+      }, 300);
+    } else if (this.props.index > (this.props.fullLength - 3)) {
+      const newIndex = this.props.project + 1;
+      setTimeout(() => {
+        position = `-${(newIndex - 1) * 22}vw - ${newIndex * 20}px `;
+        that.props.dispatch(
+          selectProject(position, projectNum, newIndex, false)
+        );
+      }, 300);
+    }
   }
 
   render() {
@@ -24,14 +45,3 @@ export default class Project extends React.Component {
     );
   }
 }
-
-// Project.propTypes = {
-//   index: React.PropTypes.number.isRequired,
-//   project: React.PropTypes.number.isRequired,
-//   dispatch: React.PropTypes.func.isRequired
-// };
-
-// -66vw - 80px
-// 3(22vw) - 4(20)px
-// this.props.index--) *(22vw) - this.props.index*(20)px
-

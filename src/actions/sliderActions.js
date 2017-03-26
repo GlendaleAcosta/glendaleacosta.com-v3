@@ -1,8 +1,11 @@
-export function selectProject(position) {
+export function selectProject(position, projectNum, index, willAnimate) {
   return {
     type: 'SELECT_PROJECT',
     payload: {
-      position
+      position,
+      projectNum,
+      index,
+      willAnimate
     }
   };
 }

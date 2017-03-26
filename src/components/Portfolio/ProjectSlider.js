@@ -4,11 +4,13 @@ import Project from './Project';
 
 let projects = [1, 2, 3, 4, 5];
 const length = projects.length;
-const first4Projects = projects.slice(0, 4);
-const last4Projects = projects.slice((length - 4), length);
+const first2Projects = projects.slice(0, 2);
+const last2Projects = projects.slice((length - 2), length);
 
-projects = last4Projects.concat(projects);
-projects = projects.concat(first4Projects);
+projects = last2Projects.concat(projects);
+projects = projects.concat(first2Projects);
+
+const fullLength = projects.length;
 
 @connect(store => ({
   projectSlider: store.projectSlider
@@ -17,17 +19,21 @@ projects = projects.concat(first4Projects);
 export default class ProjectSlider extends React.Component {
   constructor(props) {
     super(props);
+    console.log('constructor props');
   }
 
   renderProjects = () => projects.map((project, i) => (
-    <Project key={i} index={i} project={project} />
+    <Project key={i} fullLength={fullLength} index={i} project={project} />
   ));
 
   render() {
     return (
       <div className="slider-container">
         <div
-          style={{ transform: `translateX( calc(${this.props.projectSlider.position}))` }}
+          style={{
+            transform: `translateX( calc(${this.props.projectSlider.position}))`,
+            transition: `transform ${this.props.projectSlider.willAnimate ? 0.3 : 0}s ease-in-out`
+          }}
           className="project-slider"
         >
           {this.renderProjects()}
