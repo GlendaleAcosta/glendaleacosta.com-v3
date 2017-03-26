@@ -11,7 +11,7 @@ export default class Project extends React.Component {
   clickedProject = () => {
     const that = this;
     let position = `-${(this.props.index - 1) * 22}vw - ${this.props.index * 20}px `;
-    const projectNum = this.props.project;
+    const projectNum = this.props.project.id;
     const index = this.props.index;
 
     this.props.dispatch(
@@ -19,7 +19,7 @@ export default class Project extends React.Component {
     );
 
     if (this.props.index < 2) {
-      const newIndex = this.props.project + 1;
+      const newIndex = this.props.project.id + 1;
       setTimeout(() => {
         position = `-${(newIndex - 1) * 22}vw - ${newIndex * 20}px `;
         that.props.dispatch(
@@ -27,7 +27,7 @@ export default class Project extends React.Component {
         );
       }, 300);
     } else if (this.props.index > (this.props.fullLength - 3)) {
-      const newIndex = this.props.project + 1;
+      const newIndex = this.props.project.id + 1;
       setTimeout(() => {
         position = `-${(newIndex - 1) * 22}vw - ${newIndex * 20}px `;
         that.props.dispatch(
@@ -39,8 +39,13 @@ export default class Project extends React.Component {
 
   render() {
     return (
-      <div onClick={this.clickedProject} className="project">
-        <h1>{this.props.project}</h1>
+      <div onClick={this.clickedProject}
+        style={{backgroundImage: `url("${this.props.project.image}")`}}
+        className="project"
+      >
+        <div className="project-overlay">
+          <h4 className="project-name">{this.props.project.name}</h4>
+        </div>
       </div>
     );
   }
