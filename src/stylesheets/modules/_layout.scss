@@ -4,10 +4,11 @@
   background-color: black; 
   overflow: hidden;
   max-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  // flex-direction: column;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // position: relative;
 }
 
 .page-container{
@@ -33,6 +34,9 @@
   height: calc(100% - 50px);
   position: absolute;
   z-index: 10; 
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
   // overflow: hidden;
 }
 

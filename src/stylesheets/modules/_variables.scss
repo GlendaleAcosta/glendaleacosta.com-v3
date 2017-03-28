@@ -29,11 +29,11 @@ $lg-desktop-width: 1281px;
   }
 }
 
-// @mixin phone {
-//   @media (max-width: #{$phone-width}) {
-//     @content;
-//   }
-// }
+@mixin phone {
+  @media (max-width: #{$phone-width}) {
+    @content;
+  }
+}
 
 
 @mixin lg-desktop {
