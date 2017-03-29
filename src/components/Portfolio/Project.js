@@ -19,10 +19,10 @@ export default class Project extends React.Component {
       position = `-${(this.props.index * 60) - 13}vw`;
     } else {
       position = `-${((this.props.index - 2) * 22) + 4}vw`;
-    }
+    } 
 
     this.props.dispatch(
-      selectProject(position, projectNum, index, true)
+      selectProject(position, projectNum, index, true, this.props.project)
     );
 
     if (index < 4) {
@@ -30,7 +30,7 @@ export default class Project extends React.Component {
       setTimeout(() => {
         position = isMobile ? `-${(newIndex * 60) - 13}vw` : `-${(newIndex * 22) + 4}vw`;
         that.props.dispatch(
-          selectProject(position, projectNum, newIndex, false)
+          selectProject(position, projectNum, newIndex, false, this.props.project)
         );
       }, 300);
     } else if (index > (this.props.fullLength - 5)) {
@@ -38,7 +38,7 @@ export default class Project extends React.Component {
       setTimeout(() => {
         position = isMobile ? `-${(newIndex * 60) - 13}vw` : `-${(newIndex * 22) + 4}vw`;
         that.props.dispatch(
-          selectProject(position, projectNum, newIndex, false)
+          selectProject(position, projectNum, newIndex, false, this.props.project)
         );
       }, 300);
     }

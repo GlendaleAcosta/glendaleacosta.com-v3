@@ -9,7 +9,7 @@ import ankroofing from '../../images/ankroofing.jpg';
 let projects = [
   {
     id: 1,
-    name: 'ANGULAR MOVIE WATCHLIST',
+    name: 'Angular Movie Watchlist',
     technologies: ['Angularjs', 'Node', 'PostgresQL', 'TMDB REST API', 'JWT'],
     details: 'A fun movie app. Involves login, sign-up, authentication, dynamic routing, route protection, password encryption, and more. You can also save your favorite movies and add movies to your own watchlist for later.',
     github: 'https://github.com/GlendaleAcosta/angular-movie-watchlist',
@@ -18,7 +18,7 @@ let projects = [
   },
   {
     id: 2,
-    name: 'VIDS WITH FRENS',
+    name: 'Vids With Frens',
     technologies: ['React', 'Redux', 'Socket.io', 'MongoDB'],
     details: "An app that syncs you and your friends' videos. It utilizes dynamic routing, dynamic websockets, a chat system, video search, and synced video player.",
     github: 'https://github.com/GlendaleAcosta/vids-with-frens',
@@ -27,7 +27,7 @@ let projects = [
   },
   {
     id: 3,
-    name: 'VENDING MACHINE APP',
+    name: 'Vending Machine App',
     technologies: ['Angularjs', 'PHP', 'MYSQL'],
     details: "A small app. You can select and buy drinks. There's also a save functionality to keep the history if purchased items.",
     github: 'https://github.com/GlendaleAcosta/Vending-Machine-App',
