@@ -1,5 +1,5 @@
 export default function reducer(state = {
-  position: '-22vw - 40px',
+  position: document.getElementsByTagName('html')["0"].clientWidth < 767 ? '-227vw' : '-48vw',
   projectNum: 1,
   index: 2,
   willAnimate: true

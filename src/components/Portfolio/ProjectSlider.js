@@ -4,6 +4,7 @@ import Project from './Project';
 import movieWatchlist from '../../images/movie-watchlist-re3.png';
 import vidswithfrens from '../../images/vidswithfrens3.png';
 import vendingMachine from '../../images/Vending Machine App.png';
+import ankroofing from '../../images/ankroofing.jpg';
 
 let projects = [
   {
@@ -34,20 +35,21 @@ let projects = [
     image: '/images/Vending Machine App.png'
   },
   {
+    id: 4,
     name: 'A & K Roofing',
     technologies: ['Wordpress', 'HTML', 'CSS', 'JavaScript'],
     details: 'A real commercial website to demonstrate abilities with wordpress and simple UI.',
     github: null,
     website: 'http://www.ankroofing.com/',
-    image: '../../../images/A&K Roofing.png'
+    image: '../../../images/ankroofing.jpg'
   },
 ];
 const length = projects.length;
-const first3Projects = projects.slice(0, 3);
-const last3Projects = projects.slice((length - 3), length);
+const first4Projects = projects.slice(0, 4);
+const last4Projects = projects.slice((length - 4), length);
 
-projects = last3Projects.concat(projects);
-projects = projects.concat(first3Projects);
+projects = last4Projects.concat(projects);
+projects = projects.concat(first4Projects);
 
 const fullLength = projects.length;
 
@@ -57,8 +59,7 @@ const fullLength = projects.length;
 
 export default class ProjectSlider extends React.Component {
   constructor(props) {
-    super(props);
-    console.log('constructor props');
+    super(props); 
   }
 
   renderProjects = () => projects.map((project, i) => (

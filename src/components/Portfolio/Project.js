@@ -9,27 +9,34 @@ import { selectProject } from '../../actions/sliderActions';
 export default class Project extends React.Component {
 
   clickedProject = () => {
+    const isMobile = document.getElementsByTagName('html')["0"].clientWidth < 767;
     const that = this;
-    let position = `-${(this.props.index - 1) * 22}vw - ${this.props.index * 20}px `;
-    const projectNum = this.props.project.id;
     const index = this.props.index;
+    const projectNum = this.props.project.id;
+    let position;
+
+    if (isMobile) {
+      position = `-${(this.props.index * 60) - 13}vw`;
+    } else {
+      position = `-${((this.props.index - 2) * 22) + 4}vw`;
+    }
 
     this.props.dispatch(
       selectProject(position, projectNum, index, true)
     );
 
-    if (this.props.index < 3) {
-      const newIndex = this.props.project.id + 1;
+    if (index < 4) {
+      const newIndex = isMobile ? projectNum + index : projectNum + 1;
       setTimeout(() => {
-        position = `-${(newIndex - 1) * 22}vw - ${newIndex * 20}px `;
+        position = isMobile ? `-${(newIndex * 60) - 13}vw` : `-${(newIndex * 22) + 4}vw`;
         that.props.dispatch(
           selectProject(position, projectNum, newIndex, false)
         );
       }, 300);
-    } else if (this.props.index > (this.props.fullLength - 4)) {
-      const newIndex = this.props.project.id + 1;
+    } else if (index > (this.props.fullLength - 5)) {
+      const newIndex = isMobile ? projectNum + 3 : projectNum + 1;
       setTimeout(() => {
-        position = `-${(newIndex - 1) * 22}vw - ${newIndex * 20}px `;
+        position = isMobile ? `-${(newIndex * 60) - 13}vw` : `-${(newIndex * 22) + 4}vw`;
         that.props.dispatch(
           selectProject(position, projectNum, newIndex, false)
         );
@@ -39,14 +46,13 @@ export default class Project extends React.Component {
 
   render() {
     return (
-      <div onClick={this.clickedProject} className="project">
-        <div
-          className="project-img"
-          style={{ backgroundImage: `url("${this.props.project.image}")` }}
-        />
-        {/*<div className="project-detail-container">
-          <h4 className="project-name">{this.props.project.name}</h4>
-        </div>*/}
+      <div className="project-container">
+        <div onClick={this.clickedProject} className="project">
+          <div
+            className="project-img"
+            style={{ backgroundImage: `url("${this.props.project.image}")` }}
+          />
+        </div>
       </div>
     );
   }
