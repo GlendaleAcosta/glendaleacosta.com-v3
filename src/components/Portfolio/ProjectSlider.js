@@ -1,6 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { StaggeredMotion, spring } from 'react-motion';
+
 import Project from './Project';
+
 import movieWatchlist from '../../images/movie-watchlist-re3.png';
 import vidswithfrens from '../../images/vidswithfrens3.png';
 import vendingMachine from '../../images/Vending Machine App.png';
@@ -44,6 +47,8 @@ let projects = [
     image: '../../../images/ankroofing.jpg'
   },
 ];
+
+
 const length = projects.length;
 const first4Projects = projects.slice(0, 4);
 const last4Projects = projects.slice((length - 4), length);
@@ -53,20 +58,55 @@ projects = projects.concat(first4Projects);
 
 const fullLength = projects.length;
 
+const startY = 300;
+const startOpacity = 0;
+const initialStiffness = 220;
+const initialDamping = 31;
+const finalStiffness = 220;
+const finalDamping = 31;
+
+const defaultStyles = [];
+
+for (let i = 0; i < projects.length; i++) {
+  defaultStyles.push({ y: startY, o: startOpacity });
+}
+
 @connect(store => ({
   projectSlider: store.projectSlider
 }))
 
 export default class ProjectSlider extends React.Component {
   constructor(props) {
-    super(props); 
+    super(props);
   }
 
-  renderProjects = () => projects.map((project, i) => (
-    <Project key={i} fullLength={fullLength} index={i} project={project} />
-  ));
+  getStyles = prevInterpolatedStyles => prevInterpolatedStyles.map((_, i) =>
+    i === 0
+    ? { y: spring(0, { stiffness: initialStiffness, damping: initialDamping }), o: spring(1) }
+    : {
+      y: spring(prevInterpolatedStyles[i - 1].y,
+        { stiffness: finalStiffness, damping: finalDamping }),
+      o: spring(prevInterpolatedStyles[i - 1].o)
+    })
+
+  renderProjects = interpolatingStyles => (
+    <div className="project-animation-container">
+      {interpolatingStyles.map((style, i) => {
+        const projectStyles = {
+          WebkitTransform: `translate3d(0, ${style.y}%, 0)`,
+          opacity: style.o
+        };
+        return (
+          <div style={projectStyles}>
+            <Project key={i} fullLength={fullLength} index={i} project={projects[i]} />
+          </div>
+        );
+      })}
+    </div>
+    )
 
   render() {
+    console.log(this.props.projectSlider.position);
     return (
       <div className="slider-container">
         <div
@@ -76,7 +116,12 @@ export default class ProjectSlider extends React.Component {
           }}
           className="project-slider"
         >
-          {this.renderProjects()}
+          <StaggeredMotion
+            defaultStyles={defaultStyles}
+            styles={this.getStyles}
+          >
+            {this.renderProjects}
+          </StaggeredMotion>
         </div>
       </div>
     );
