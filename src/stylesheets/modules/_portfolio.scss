@@ -262,3 +262,13 @@
   display: flex;
 }
 
+.project-cover {
+  background-color: white;
+  width: calc(100% - 20px);
+  height: 145%;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+}

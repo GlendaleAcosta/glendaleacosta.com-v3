@@ -96,9 +96,14 @@ export default class ProjectSlider extends React.Component {
           WebkitTransform: `translate3d(0, ${style.y}%, 0)`,
           opacity: style.o
         };
+        const coverStyles = {
+          WebkitTransform: `translate3d(-50%, ${-style.y * 1.9}%, 0)`,
+        }
+
         return (
           <div style={projectStyles}>
             <Project key={i} fullLength={fullLength} index={i} project={projects[i]} />
+            <div style={coverStyles} className="project-cover" />
           </div>
         );
       })}
