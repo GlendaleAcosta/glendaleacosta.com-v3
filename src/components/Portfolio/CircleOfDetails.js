@@ -10,12 +10,6 @@ export default class CircleOfDetails extends React.Component {
     super(props);
   }
 
-        // var technologies = selectedProject.technologies.map(function(technology, index){
-        //     return (
-        //         <li key={index}>{technology}</li>
-        //     )
-        // })
-
   renderTech = () => {
     let string = '';
     const lastIndex = this.props.projectSlider.project.technologies.length;

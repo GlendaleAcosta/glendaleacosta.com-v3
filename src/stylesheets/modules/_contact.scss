@@ -1,31 +1,51 @@
 .contact-bg-container {
   width: 55%;
   height: 70%;
-  background-color: lightblue;
   position: absolute;
-  right: 15px;
+  right: 20px;
   top: 48%;
   transform: translateY(-50%);
   display: flex;
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
+  padding: 5px;  
+  flex-direction: row;
+}
+
+.contact-bg {
+  background-size: cover;
+  background-position: center;
+  width: 95%;
+  height: 95%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .contact-rect-1 {
   width: 60%;
-  height: 30%;
-  background-color: lightseagreen;
+  height: 0%;
+  background-color: #232f46;
+  position: relative;
+  z-index: 2;
 }
 
 .contact-rect-2 {
-  width: 15%;
+  width: 13%;
   height: 100%;
-  background-color: lightcoral;
+  background-color: #232f46;
+  position: relative;
+  z-index: 2;
 }
 
 .contact-rect-3 {
-  width: 25%;
-  height: 100%;
-  background-color: lightseagreen;
+  width: 27%;
+  height: 0%;
+  background-color: #232f46;
+  position: relative;
+  z-index: 2;
 }
 
 .contact-box-container {

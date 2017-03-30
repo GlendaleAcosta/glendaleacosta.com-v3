@@ -8,9 +8,10 @@ import ProjectSlider from '../components/Portfolio/ProjectSlider';
 import CircleOfDetails from '../components/Portfolio/CircleOfDetails';
 
 export default class Portfolio extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {};
+    console.log(props);
   }
 
   render() {
