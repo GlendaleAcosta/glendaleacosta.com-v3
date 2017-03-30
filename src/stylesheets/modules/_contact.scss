@@ -11,6 +11,10 @@
   overflow: hidden;
   padding: 5px;  
   flex-direction: row;
+  
+  @include phone {
+    display: none;
+  }
 }
 
 .contact-bg {
@@ -49,12 +53,131 @@
 }
 
 .contact-box-container {
-  width: 48vw;
+  width: 50vw;
   height: 30vw;
-  background-color: lightblue;
   position: absolute;
-  top: 30%;
-  left: 15%;
+  top: 31%;
+  left: 11%;
+  display: flex;
+  box-shadow: 1px 1px 10px 1px rgba(30,30,30,0.6);
+  z-index: 3;
+
+
+  @include phone {    
+    left: 50%;
+    margin: 0 auto;
+    height: 60vh;
+    width: 90%;
+    transform: translateX(-50%);
+    box-shadow: none;
+  }
+}
+
+.contact-form-img {
+  width: 45%;
+  height: 100%;
+  background-color: lightseagreen;
+  background-size: cover;
+  background-position: center;
+
+  @include phone {
+    display:none;
+  }
+}
+
+.contact-form-container {
+  width: 55%;
+  height: 100%;
+  background-color: #f6f6f6;
+
+  @include phone {
+    width: 100%;
+    background-color: #232f46;
+  }
+}
+
+.contact-form-title {
+  font-size: 28px;
+  font-family: 'Poppins', sans-serif;
+  padding: 8px;
+  margin: 0 0 0 20px;
+  color: #232f46;
+  height: 15%;
+
+  @include phone {
+    color: #49a963;
+  }
+}
+
+.contact-form {
+  padding: 10px 30px;
+  width: 100%;
+  height: 85%;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  // margin: 5px 0;
+  font-size: 16px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid #232f46;
+  padding: 12px 0px;
+  background-color: rgba(0,0,0,0);
+  outline: none;
+  color: rgb(40,40,40);
+  height: 20%;
+
+  @include phone {
+    border-bottom: 1px solid #fff;
+  }
+}
+
+.form-textarea {
+  width: 100%;
+  font-size: 16px;
+  color: rgb(40,40,40);
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid #232f46;
+  // margin: 5px 0;
+  outline: none;
+  background-color: rgba(0,0,0,0);
+  display: block;
+  height: 130px;
+  padding: 12px 0px;
+  resize: none;
+  height: 35%;
+
+  @include phone {
+    border-bottom: 1px solid #fff;
+  }
+}
+
+.form-btn-container {
+  padding: 12px 0; 
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 25%
+}
+
+.form-btn {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #232f46;
+  background-color: #232f46;
+  color: #fff;
+  cursor: pointer;
+
+  @include phone{
+    border: 1px solid #49a963;
+    background-color: #49a963;
+    color: #fff;
+  }
 }
 
 .contact-title-container {
@@ -67,6 +190,7 @@
 }
 
 .contact-title {
+  font-size: 36px;
   color: #fff;
   font-family: 'Poppins', sans-serif;
   margin: 0; 
