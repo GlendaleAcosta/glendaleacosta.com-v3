@@ -18,7 +18,7 @@ export default class Main extends Component {
     if (this.props.location.pathname === '/') {
       color = 'rgba(0,0,0,0)';
     } else if (this.props.location.pathname === '/portfolio') {
-      color = '#650b0b';
+      color = 'rgba(90, 0, 0, 0.65)';
     } else if (this.props.location.pathname === '/contact') {
       color = '#232f46';
     }

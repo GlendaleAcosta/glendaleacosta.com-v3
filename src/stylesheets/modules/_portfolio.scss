@@ -28,7 +28,7 @@
   position: absolute;
   width: 33vw;
   height: 33vw;
-  // background-color: lightblue;
+  background-color: #300d13;
   border-radius: 50%;
   top: 60%;
   transform: translateY(-50%);
@@ -103,7 +103,8 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   box-shadow: 0px 14px 25px -15px black;
   // border-radius: 5px;
 
@@ -137,6 +138,8 @@
   background-size: cover;
   background-position: center;
   // border: 8px solid #fff;
+
+  // box-shadow: 0px 11px 5px -10px #000;
 }
 
 .project-name {
