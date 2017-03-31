@@ -1,5 +1,6 @@
 import React from 'react';
 import Particles from 'react-particles-js';
+import { browserHistory } from 'react-router';
 
 import PageLayout from '../components/Layout/PageLayout';
 
@@ -23,6 +24,13 @@ export default class Home extends React.Component {
   constructor() {
     super();
     this.state = {};
+    document.getElementsByTagName('html')['0'].onmousewheel = (e) => {
+      setTimeout(() => {
+        if (e.deltaY > 50) {
+          browserHistory.push('/portfolio');
+        }
+      }, 500);
+    };
   }
 
   render() {

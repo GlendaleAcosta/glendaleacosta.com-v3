@@ -9,6 +9,7 @@
   width: 62px;
   height: 62px;
   text-align: center;
+  z-index: 2;
 
   @include lg-desktop {
     bottom: 25px;

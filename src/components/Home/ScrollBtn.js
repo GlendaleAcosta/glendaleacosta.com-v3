@@ -1,18 +1,25 @@
 import React from 'react';
 import { Motion, spring } from 'react-motion';
+import { browserHistory } from 'react-router';
+
 import downArrow from '../../images/Down-Arrow.svg';
 
 export default class ScrollBtn extends React.Component {
+
+  changePage = () => {
+    browserHistory.push('/portfolio');
+  }
 
   renderBtn = (interpolatingStyle) => {
     const styles = {
       WebkitTransform: `translate3d(-50%, ${interpolatingStyle.y}%, 0)`,
       transform: `translate3d(-50%, ${interpolatingStyle.y}%, 0)`,
     };
+
     return (
       <div style={styles} className="scroll-btn-container">
         <p className="scroll-btn-text">SCROLL DOWN</p>
-        <svg id="scroll-btn" width="62px" height="62px" viewBox="-1 -1 62 62">
+        <svg onClick={this.changePage} id="scroll-btn" width="62px" height="62px" viewBox="-1 -1 62 62">
           <path
             stroke="rgba(255,255,255,0.6)"
             strokeDasharray="190"
