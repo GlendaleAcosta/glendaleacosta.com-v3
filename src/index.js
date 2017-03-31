@@ -12,7 +12,7 @@ import reducers from './reducers';
 import routes from './routes';
 import './stylesheets/main.scss';
 
-const middleware = applyMiddleware(promise(), thunk); // add logger for dev
+const middleware = applyMiddleware(promise(), thunk, logger); // add logger for dev
 const store = createStore(reducers, middleware);
 
 ReactDOM.render(

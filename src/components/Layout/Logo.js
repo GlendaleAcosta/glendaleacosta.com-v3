@@ -1,7 +1,7 @@
 import React from 'react';
 import { Motion, spring } from 'react-motion';
-import logo from '../../images/Logot-test-4.png';
-
+import logo from '../../images/temp-Logo.png';
+import { Link } from 'react-router';
 export default class Logo extends React.Component {
 
   renderLogo = (interpolatingStyles) => {
@@ -12,7 +12,9 @@ export default class Logo extends React.Component {
 
     return (
       <div style={styles} className="logo">
-        <img src={logo} alt="Glendale Acosta" />
+        <Link to="/">
+          <img src={logo} alt="Glendale Acosta" />
+        </Link>
       </div>
     );
   }

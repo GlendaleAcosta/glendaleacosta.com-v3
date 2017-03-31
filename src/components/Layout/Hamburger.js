@@ -1,7 +1,20 @@
 import React from 'react';
 import { Motion, spring } from 'react-motion';
+import { connect } from 'react-redux';
+import { openMenu } from '../../actions/menuActions';
+
+@connect(store => ({
+  menu: store.menu
+}))
 
 export default class Hamburger extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  openMenu = () => {
+    this.props.dispatch(openMenu());
+  }
 
   renderHamburger = (interpolatingStyles) => {
     const styles = {
@@ -9,7 +22,7 @@ export default class Hamburger extends React.Component {
       transform: `translateY(${interpolatingStyles.y}%)`,
     };
     return (
-      <div style={styles} className="menu">
+      <div onClick={this.openMenu} style={styles} className="menu">
         <p>MENU</p>
         <div className="hamburger">
           <div className="hamburger-mid" />
