@@ -10,6 +10,11 @@
   @include phone {
     top: 16%;
   }
+
+  @include lg-desktop {
+    left: 15%;
+  }
+
 }
 
 .portfolio-title {
@@ -20,6 +25,9 @@
 
   @include phone {
     font-size: 25px;
+  }
+  @include lg-desktop{
+    font-size: 55px;
   }
 }
 
@@ -162,6 +170,10 @@
     border-radius: 50%;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
+
+    @include lg-desktop {
+      font-size: 38px;
+    }
 }
 
 .project-title {
@@ -173,12 +185,18 @@
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 19px;
+  width: 100%;
+  text-align: center;
 
   @include phone {
     bottom: 10%;
     font-size: 23px;
     width: 100%;
     text-align: center;
+  }
+
+  @include lg-desktop {
+    font-size: 30px;
   }
 }
 
@@ -216,6 +234,11 @@
     padding: 8px 20px;
     font-size: 18px;
   }
+
+  @include lg-desktop {
+    padding: 8px 20px;
+    font-size: 20px;
+  }
 }
 
 .project-link {
@@ -237,7 +260,10 @@
     padding: 8px 20px;
     font-size: 18px;
   }
-
+  @include lg-desktop {
+    padding: 8px 20px;
+    font-size: 20px;
+  }
 }
 
 .project-tech {
@@ -258,6 +284,10 @@
 
   @include phone {
     display: none;
+  }
+
+  @include lg-desktop {
+    font-size: 22px;
   }
 }
 
