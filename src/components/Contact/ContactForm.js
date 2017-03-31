@@ -4,13 +4,8 @@ import Email from '../../api/Email';
 export default class ContactForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      name: '',
-      email: '',
-      message: ''
-    };
+    this.state = { name: '', email: '', message: '' };
   }
-
 
   onSubmit = (e) => {
     e.preventDefault();
@@ -24,20 +19,20 @@ export default class ContactForm extends React.Component {
     Email.postContact(contactInfo)
       .then((res) => {
         const msg = res.body.msg;
-        if (msg) {
+        if (res.body.successful) {
           that.setState({
             name: '',
             email: '',
             message: ''
           });
-          // that.setState({
-          //   serverResponse: msg,
-          //   isLoading: false
-          // });
+          alert(msg);
+        } else {
+          alert(msg);
         }
       })
       .catch((err) => {
         console.log(err);
+        alert(err.body.msg);
       });
   }
 

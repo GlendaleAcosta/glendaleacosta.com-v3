@@ -98,7 +98,7 @@ export default class ProjectSlider extends React.Component {
         };
         const coverStyles = {
           WebkitTransform: `translate3d(-50%, ${-style.y * 1.9}%, 0)`,
-        }
+        };
 
         return (
           <div style={projectStyles}>
@@ -111,7 +111,6 @@ export default class ProjectSlider extends React.Component {
     )
 
   render() {
-    console.log(this.props.projectSlider.position);
     return (
       <div className="slider-container">
         <div
