@@ -21,9 +21,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
-
-console.log(document.getElementsByTagName('html'));
-
-document.getElementsByTagName('html')["0"].ondrag = (e) => {
-  console.log(e);
-}
